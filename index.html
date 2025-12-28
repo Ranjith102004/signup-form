@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Signup Page</title>
+
+  <meta name="description" content="A responsive and accessible signup form built using HTML and CSS." />
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --error: #dc2626;
+      --success: #16a34a;
+      --bg: #f9fafb;
+      --text: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      width: 100%;
+      max-width: 420px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: bold;
+    }
+
+    input,
+    button {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #d1d5db;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    input:invalid {
+      border-color: var(--error);
+    }
+
+    input:valid {
+      border-color: var(--success);
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-bottom: 1rem;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      font-weight: normal;
+      display: inline;
+      margin-right: 1rem;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+
+  <header>
+    <h1>Create Your Account</h1>
+    <p>Join us by filling out the signup form below</p>
+  </header>
+
+  
+  <main>
+    <form action="#" method="post">
+      <h2>Signup</h2>
+
+      
+      <label for="email">Email Address</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        placeholder="you@example.com"
+      />
+
+      
+      <label for="password">Password</label>
+      <input 
+        type="password" 
+        id="password" 
+        name="password" 
+        required 
+        minlength="8"
+        placeholder="Minimum 8 characters"
+      />
+
+      
+      <label for="confirm-password">Confirm Password</label>
+      <input 
+        type="password" 
+        id="confirm-password" 
+        name="confirm-password" 
+        required
+      />
+
+      
+      <label for="dob">Date of Birth</label>
+      <input 
+        type="date" 
+        id="dob" 
+        name="dob" 
+        required
+      />
+
+      
+      <div class="radio-group">
+        <p><strong>Gender</strong></p>
+        <label>
+          <input type="radio" name="gender" value="male" required /> Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" /> Female
+        </label>
+      </div>
+
+      
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" required />
+          I agree to the terms and conditions
+        </label>
+      </div>
+
+      
+      <button type="submit">Signup</button>
+    </form>
+  </main>
+
+  
+
+</body>
+</html>
